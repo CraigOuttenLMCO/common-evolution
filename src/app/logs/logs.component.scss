@@ -1,0 +1,11 @@
+/* andrew begin */
+
+/* fix vertical spacing */
+//html body ce-app ce-main.ng-star-inserted td-layout mat-sidenav-container.mat-drawer-container.mat-sidenav-container mat-sidenav-content.mat-drawer-content.mat-sidenav-content.ng-star-inserted ce-logs.ng-star-inserted td-layout-nav-list div.td-layout-nav-list-wrapper mat-sidenav-container.td-layout-nav-list.mat-drawer-container.mat-sidenav-container mat-sidenav-content.mat-drawer-content.mat-sidenav-content.ng-star-inserted div.td-layout-nav-list-main div.td-layout-nav-list-content mat-card.mat-card.push td-search-box.push-left.push-right.andrew.ng-tns-c14-2.ng-star-inserted div.td-search-box td-search-input.ng-tns-c14-2.ng-tns-c16-4.ng-trigger.ng-trigger-inputState.ng-untouched.ng-valid.ng-dirty div.td-search-input mat-form-field.td-search-input-field.mat-input-container.mat-form-field.ng-tns-c17-5.mat-primary.mat-form-field-type-mat-input.mat-hide-underline.mat-form-field-hide-placeholder.ng-pristine.ng-valid.ng-touched div.mat-input-wrapper.mat-form-field-wrapper
+
+/* narrow the space between Log title and search area */
+.mat-card-title {
+    margin-bottom: 0px;
+}
+
+/* andrew end */

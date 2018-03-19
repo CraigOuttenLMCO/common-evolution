@@ -1,0 +1,56 @@
+[
+  {
+    "displayName" : "Andrew Morrison",
+    "id" : "andrew.morrison",
+    "email" : "andrew.morrison@gmail.com",
+    "created" : "10/01/2015 11:05 AM",
+    "lastAccess" : "12/23/2015 11:05 AM",
+    "siteAdmin": true,
+    "disabled": false
+  },
+  {
+    "displayName" : "Suzy Cuningham",
+    "id" : "suzy.cuningham",
+    "email" : "suzy.cuningham@gmail.com",
+    "created" : "10/01/2015 11:05 AM",
+    "lastAccess" : "12/23/2015 11:05 AM",
+    "siteAdmin": true,
+    "disabled": false
+  },
+  {
+    "displayName" : "Bobby Daniels",
+    "id" : "bobbyD",
+    "email" : "bobbyD@outlook.com",
+    "created" : "10/01/2015 11:05 AM",
+    "lastAccess" : "12/23/2015 11:05 AM",
+    "siteAdmin": false,
+    "disabled": false
+  },
+  {
+    "displayName" : "John Walker",
+    "id" : "johnnyWalker",
+    "email" : "johnnyWalker@blue.com",
+    "created" : "10/01/2015 11:05 AM",
+    "lastAccess" : "12/23/2015 11:05 AM",
+    "siteAdmin": false,
+    "disabled": false
+  },
+  {
+     "displayName" : "Eddy Stevens",
+     "id" : "eStevens",
+     "email" : "eStevens@yahoo.com",
+     "created" : "10/01/2015 11:05 AM",
+     "lastAccess" : "12/23/2015 11:05 AM",
+     "siteAdmin": false,
+     "disabled": false
+  },
+  {
+     "displayName" : "Jan Williams",
+     "id" : "jDubz",
+     "email" : "jDubz@msn.com",
+     "created" : "10/01/2015 11:05 AM",
+     "lastAccess" : "12/23/2015 11:05 AM",
+     "siteAdmin": false,
+     "disabled": true
+  }
+]

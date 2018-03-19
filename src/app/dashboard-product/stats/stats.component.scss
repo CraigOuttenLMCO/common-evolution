@@ -1,0 +1,153 @@
+.chart-height {
+    height: 250px;
+}
+
+/* andrew begin */
+.grid-flow {
+    padding: 4px 4px 4px 4px;
+}
+
+.grid-flow-collapsed {
+    padding: none;
+}
+
+/*
+ color blindness: http://mkweb.bcgsc.ca/colorblind/ | https://venngage-wordpress.s3.amazonaws.com/uploads/2017/06/color-blind-friendly-palette-9.png
+ bootstrap: https://user-images.githubusercontent.com/98681/27195708-9dc768ae-51bc-11e7-914e-1dc52dfbc2cb.png
+
+ red - critically/urgently below
+ orange - below
+ yellow - below normal
+ green - normal
+ gray - normal
+*/
+
+mat-card-header {
+    padding-top: 4px;
+    padding-right: 4px;
+    /*background-color: rgb(233, 236, 239);*/
+}
+
+
+//.mat-card mat-card-content {
+//    padding: 0px 16px 16px 16px; /* t, r, b, l */
+//}
+
+/* Fix for font size */
+mat-card-header mat-card-title {
+    font-size: 24px;
+}
+
+mat-card-header button {
+    //padding: 10px 10px 10px 10px;
+    margin: 4px 4px 0px 0px;
+}
+
+mat-grid-list {
+    padding: 2px 2px 2px 2px; /* t, r, b, l */
+}
+
+mat-grid-tile {
+    background: none;
+}
+
+mat-grid-tile mat-icon {
+    /* spacing before icon, to help with flex */
+    margin-left: 16px;
+}
+
+mat-grid-tile p, {
+    //padding-left: 10px;
+    /* spacing after text, to help with flex */
+    margin-right: 16px;
+}
+
+mat-grid-tile.name {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 123, 255);
+}
+
+mat-grid-tile.header {
+    //background-color: none;
+    //font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, .38);
+    
+    //border-style: solid;
+    //border-width: 0px 0px 1px 0px; /* t, r, b, l */
+    //border-bottom-color: rgb(233, 236, 239);
+}
+
+//mat-grid-tile.header p {
+    //border-style: solid;
+    //border-top-width: 0px;
+    //border-right-width: 0px;
+    //border-bottom-width: 2px;
+    //border-left-width: 0px;
+//}
+
+/* Trends:
+   up
+   upward
+   flat
+   below
+   downward
+   down
+*/
+mat-grid-tile.trending-up {
+    //background-color: rgba(6, 138, 6, 1);
+    background-color: rgb(40, 167, 69);
+    //background-color: rgb(0, 128, 0);
+
+    color: rgb(255, 255, 255);
+}
+
+mat-grid-tile.trending-upward {
+    background-color: rgba(92, 184, 92, 1);
+    //color: rgb(33, 37, 41);
+    color: rgb(0, 0, 0);
+}
+
+/*
+mat-grid-tile.up mat-icon, mat-grid-tile.up p {
+    color: rgb(255, 255, 255);
+}
+*/
+
+mat-grid-tile.trending-flat {
+    background-color: rgb(233, 236, 239);
+    color: rgb(0, 0, 0);
+}
+
+mat-grid-tile.trending-below {
+    //background-color: rgba(255, 213, 0, 1);
+    background-color: rgb(255, 193, 7);
+    color: rgb(0, 0, 0);
+}
+
+/*
+mat-grid-tile.trending-below mat-icon, mat-grid-tile.trending-below p {
+    color: rgb(0, 0, 0);
+}
+*/
+
+mat-grid-tile.trending-downward {
+    background-color: rgba(218, 126, 0, 1);
+    color: rgb(0, 0, 0);
+}
+
+mat-grid-tile.trending-downward mat-icon {
+    transform: rotate(90deg);
+}
+
+mat-grid-tile.trending-down {
+    //background-color: rgba(218, 59, 54, 1);
+    background-color: rgb(220, 53, 69);
+    color: rgb(255, 255, 255);
+}
+/*
+mat-grid-tile.down mat-icon, mat-grid-tile.down p {
+    color: rgb(255, 255, 255);
+}
+*/
+/* andrew end */

@@ -1,0 +1,111 @@
+<td-layout-nav-list
+    logo="assets:common-evolution"
+    navigationRoute="/"
+    toolbarTitle="Logs"
+    [opened]="media.registerQuery('gt-sm') | async"
+    [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
+    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '350px' : '100%'">
+
+    <button mat-icon-button td-menu-button tdLayoutToggle>
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- andrew begin -->
+    <!--
+    <td-search-box class="push-left push-right andrew"
+      td-sidenav-content [tdLayoutNavListClose]="!media.query('gt-sm')"
+      placeholder="Search"
+      [alwaysVisible]="true"
+      [showUnderline]="true"
+      (searchDebounce)="filterLogs($event)">
+    </td-search-box>
+    -->
+    <!-- andrew end -->
+
+    <mat-nav-list td-sidenav-content [tdLayoutNavListClose]="!media.query('gt-sm')">
+        <!-- andrew begin -->
+        <!--
+        <mat-list-item>
+          <td-search-box class="push-left push-right andrew" placeholder="Search" [alwaysVisible]="true" [showUnderline]="false" (searchDebounce)="filterProducts($event)"></td-search-box>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        -->
+
+        <mat-list-item *ngIf="filteredProducts?.length === 0">
+          <!--
+          <div class="pad" layout="row" layout-align="center center">
+            <h3>No logs to display.</h3>
+          </div>
+          -->
+          No logs to display.
+        </mat-list-item>
+        <!-- andrew end -->
+
+        <!-- andrew: original
+        <ng-template let-item let-last="last" ngFor [ngForOf]="products">
+        -->
+        <ng-template let-item let-last="last" ngFor [ngForOf]="filteredProducts">
+          <a mat-list-item [routerLink]="['/logs']">
+            <mat-icon matListAvatar>{{item.icon}}</mat-icon>
+            <h3 matLine> {{item.name}} </h3>
+            <p matLine> product logs </p> 
+          </a>
+          <mat-divider *ngIf="!last" [inset]="true"></mat-divider>
+        </ng-template>
+
+        <!-- andrew begin (testing scrollbar) -->
+        <!--
+        <mat-divider *ngIf="!last" [inset]="true"></mat-divider>
+
+        <ng-template let-item let-last="last" ngFor [ngForOf]="products">
+          <a mat-list-item [routerLink]="['/logs']">
+            <mat-icon matListAvatar>{{item.icon}}</mat-icon>
+            <h3 matLine> {{item.name}} </h3>
+            <p matLine> product logs </p> 
+          </a>
+          <mat-divider *ngIf="!last" [inset]="true"></mat-divider>
+        </ng-template>
+        -->
+        <!-- andrew end -->
+    </mat-nav-list>
+    <div td-toolbar-content layout="row" layout-align="start center" flex>
+      <button mat-icon-button tdLayoutNavListOpen [hideWhenOpened]="true">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>All Product Logs</span>
+      <span flex></span>
+    </div>
+    <mat-card tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+      <!-- andrew: original
+      <mat-card-title>Logs</mat-card-title>
+      -->
+      <!-- andrew begin -->
+      <div layout="row" layout-align="start left">
+      <mat-card-title>Logs</mat-card-title>
+      <!-- Note: if showUnderline is false, .mat-form-field-wrapper padding-bottom style makes the search box not look aligned -->
+      <!-- andrew - why is the search area not 100%? -->
+      <td-search-box class="push-left push-right"
+          placeholder="Search"
+          [alwaysVisible]="true"
+          [showUnderline]="true"
+          (searchDebounce)="filterProducts($event)"></td-search-box>
+      </div>
+      <!-- andrew end -->
+      <mat-divider></mat-divider>
+      <ng-template tdLoading="items.load">
+        <mat-list class="will-load" >
+          <div class="pad" *ngIf="!items || items.length === 0" layout="row" layout-align="center center">
+            <h3>No logs to display.</h3>
+          </div>
+          <ng-template let-item let-last="last" ngFor [ngForOf]="items">
+            <mat-list-item [title]="item.description">
+              <mat-icon matListIcon> {{item.icon}} </mat-icon>
+              <h3 matLine> {{item.description}} <span class="mat-caption tc-grey-600">({{item.created}})</span> </h3>
+              <p matLine> {{item.name}} </p>
+            </mat-list-item>
+            <mat-divider *ngIf="!last"></mat-divider>
+          </ng-template>
+        </mat-list>
+      </ng-template>
+    </mat-card>
+  </td-layout-nav-list>

@@ -1,0 +1,20 @@
+:host ::ng-deep {
+    .tick text {
+        font-size: 24px;
+    }
+}
+
+.chart-height {
+    height: 200px;
+}
+
+/* andrew begin */
+.chartjs {
+    height: 200px;
+    padding: 10px 10px 10px 10px;
+}
+
+.chart-card-title {
+    font-size: 24px;
+}
+/* andrew end */

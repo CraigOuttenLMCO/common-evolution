@@ -1,0 +1,23 @@
+#this is a sample schema file for a user object.
+# comments in yaml are denoted with the # sign.
+# PROTIP: DON'T use tabs in yaml files! Only spaces.
+---
+# the following three lines here are to initialize
+# the mock objects and will not be included in the final
+# objects.
+initial_entries: 5
+randomize: false
+search_index: id
+
+displayName: {{.firstname}} {{.lastname}}
+id: {{toLower(.firstname)}}.{{toLower(.lastname)}}
+email: {{toLower(.firstname)}}.{{toLower(.lastname)}}@{{.company}}.com
+mailingAddress:
+ {{embed(address.yaml)}}
+created: {{.createdtimestamp}}
+lastAccess: {{.itemtimestamp}}
+siteAdmin: {{.admin}}
+disabled: {{.disabled}}
+favorite: {{.favorite}}
+databaseId: {{uuid()}}
+...

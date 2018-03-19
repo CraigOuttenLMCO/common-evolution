@@ -1,0 +1,55 @@
+<mat-card class="push-bottom-xxl" tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+  <!-- andrew: added class 'andrew' -->
+  <td-search-box
+    class="push-left push-right andrew"
+    placeholder="Search"
+    [alwaysVisible]="true"
+    [showUnderline]="true"
+    (searchDebounce)="filterUsers($event)">
+  </td-search-box>
+  <mat-divider></mat-divider>
+  <ng-template tdLoading="users.list">
+    <mat-list class="will-load">
+      <div class="pad" *ngIf="filteredUsers?.length === 0" layout="row" layout-align="center center">
+        <h3>No users to display.</h3>
+      </div>
+      <ng-template let-user let-last="last" ngFor [ngForOf]="filteredUsers">
+        <mat-list-item>
+          <mat-icon matListAvatar>person</mat-icon>
+          <h3 matLine> {{user.displayName}} </h3>
+          <p matLine> {{user.email}} </p>
+          <p matLine hide-gt-md class="mat-caption"> last login: {{ user.lastAccess | timeAgo }} </p>
+          <span flex></span>
+          <span hide-xs hide-sm hide-md flex-gt-xs="60" flex-xs="40" layout-gt-xs="row">
+              <div class="mat-caption tc-grey-500" flex-gt-xs="50"> {{ user.created | date }} </div>
+              <div class="mat-caption tc-grey-500" flex-gt-xs="50"> {{ user.lastAccess | timeAgo }} </div>
+          </span>
+          <span>
+              <button mat-icon-button [mat-menu-trigger-for]="menu">
+              <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu x-position="before" #menu="matMenu">
+                  <!-- andrew: added '/users' -->
+                  <!-- [queryParams]="{view: 'administrators'}" -->
+                  <a [routerLink]="['/users', user.id, 'edit']" [queryParams]="{view: this.view}" mat-menu-item>
+                    <mat-icon>edit</mat-icon> Edit
+                  </a>
+                  <button mat-menu-item (click)="delete(user.id)">
+                    <mat-icon>delete</mat-icon> Delete
+                  </button>
+                  <!-- Andrew begin -->
+                  <div *ngIf="user.disabled">
+                    <!-- andrew: added '/users' -->
+                    <a [routerLink]="['/users', user.id, 'enable']" mat-menu-item>
+                      <mat-icon>add_circle_outline</mat-icon> Enable
+                    </a>
+                  </div>
+                  <!-- Andrew end -->
+              </mat-menu>
+          </span>
+        </mat-list-item>
+        <mat-divider *ngIf="!last" [inset]="true"></mat-divider>
+      </ng-template>
+    </mat-list>
+  </ng-template>
+</mat-card>
