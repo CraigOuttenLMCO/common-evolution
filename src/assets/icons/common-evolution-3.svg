@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="298"
+   height="60"
+   viewBox="0 0 78.845835 15.875"
+   version="1.1"
+   id="svg3705"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="common-evolution.svg">
+  <defs
+     id="defs3699" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="116.25"
+     inkscape:cy="145"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3702">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-281.12498)">
+    <g
+       id="g3748"
+       transform="matrix(0.94257819,0,0,0.97565109,0.396875,281.25727)">
+      <path
+         id="path3725"
+         d="M 5,2 H 3 C 2.45,2 2,2.45 2,3 V 5 C 2,5.55 2.45,6 3,6 H 5 C 5.55,6 6,5.55 6,5 V 3 C 6,2.45 5.55,2 5,2 Z"
+         inkscape:connector-curvature="0"
+         style="fill:currentColor" />
+      <path
+         id="path3727"
+         d="m 11,6 h 2 c 0.55,0 1,-0.45 1,-1 V 3 C 14,2.45 13.55,2 13,2 h -2 c -0.55,0 -1,0.45 -1,1 v 2 c 0,0.55 0.45,1 1,1 z m 0,-3 h 2 v 2 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:currentColor" />
+      <path
+         id="path3729"
+         d="M 5,10 H 3 c -0.55,0 -1,0.45 -1,1 v 2 c 0,0.55 0.45,1 1,1 h 2 c 0.55,0 1,-0.45 1,-1 V 11 C 6,10.45 5.55,10 5,10 Z m 0,3 H 3 v -2 h 2 z"
+         inkscape:connector-curvature="0"
+         style="fill:currentColor" />
+      <path
+         id="path3731"
+         d="m 13,10 h -2 c -0.55,0 -1,0.45 -1,1 v 2 c 0,0.55 0.45,1 1,1 h 2 c 0.55,0 1,-0.45 1,-1 v -2 c 0,-0.55 -0.45,-1 -1,-1 z"
+         inkscape:connector-curvature="0"
+         style="fill:currentColor" />
+      <path
+         id="path3733"
+         d="M 14,8 H 13 C 11.664,8 10.409,7.48 9.464,6.536 8.519,5.592 8,4.336 8,3 V 2 C 8,0.9 7.1,0 6,0 H 2 C 0.9,0 0,0.9 0,2 V 6 C 0,7.1 0.9,8 2,8 H 3 C 4.336,8 5.591,8.52 6.536,9.464 7.481,10.408 8,11.664 8,13 v 1 c 0,1.1 0.9,2 2,2 h 4 c 1.1,0 2,-0.9 2,-2 V 10 C 16,8.9 15.1,8 14,8 Z m 1,6 c 0,0.265 -0.105,0.515 -0.295,0.705 C 14.515,14.895 14.265,15 14,15 H 10 C 9.735,15 9.485,14.895 9.295,14.705 9.105,14.515 9,14.265 9,14 V 13 C 9,9.686 6.314,7 3,7 H 2 C 1.735,7 1.485,6.895 1.295,6.705 1.105,6.515 1,6.264 1,6 V 2 C 1,1.735 1.105,1.485 1.295,1.295 1.485,1.105 1.735,1 2,1 H 6 C 6.265,1 6.515,1.105 6.705,1.295 6.895,1.485 7,1.735 7,2 v 1 c 0,3.314 2.686,6 6,6 h 1 c 0.265,0 0.515,0.105 0.705,0.295 C 14.895,9.485 15,9.735 15,10 Z"
+         inkscape:connector-curvature="0"
+         style="fill:currentColor" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.10760212px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:0.25269008"
+       x="15.762605"
+       y="323.35837"
+       id="text3752"
+       transform="scale(1.1216308,0.89155894)"><tspan
+         sodipodi:role="line"
+         id="tspan3750"
+         x="15.762605"
+         y="323.35837"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans Bold';stroke-width:0.25269008">COMMON</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.01936054px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:0.275484"
+       x="15.276572"
+       y="349.55789"
+       id="text3756"
+       transform="scale(1.1816788,0.84625368)"><tspan
+         sodipodi:role="line"
+         id="tspan3754"
+         x="15.276572"
+         y="349.55789"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0;font-family:Forte;-inkscape-font-specification:Forte;stroke-width:0.275484">Evolution</tspan></text>
+  </g>
+</svg>

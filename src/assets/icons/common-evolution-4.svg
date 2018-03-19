@@ -29,7 +29,7 @@
      inkscape:cx="35"
      inkscape:cy="145"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3748"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
@@ -85,27 +85,27 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.29494381px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:0.28237361"
-       x="15.217337"
-       y="324.18503"
+       style="font-style:normal;font-weight:normal;font-size:10.10760212px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:0.25269008"
+       x="15.762605"
+       y="323.35837"
        id="text3752"
-       transform="scale(1.1230259,0.89045137)"><tspan
+       transform="scale(1.1216308,0.89155894)"><tspan
          sodipodi:role="line"
          id="tspan3750"
-         x="15.217337"
-         y="324.18503"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans Bold';stroke-width:0.28237361">COMMON</tspan></text>
+         x="15.762605"
+         y="323.35837"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans Bold';stroke-width:0.25269008">COMMON</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:15.72517109px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:0.39312923"
-       x="13.591001"
-       y="392.49088"
+       style="font-style:normal;font-weight:normal;font-size:14.16990757px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:currentColor;fill-opacity:1;stroke:none;stroke-width:0.35424766"
+       x="13.343977"
+       y="398.88803"
        id="text3756"
-       transform="scale(1.3228225,0.75595933)"><tspan
+       transform="scale(1.3485097,0.74155937)"><tspan
          sodipodi:role="line"
          id="tspan3754"
-         x="13.591001"
-         y="392.49088"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.60636806px;line-height:0;font-family:Gabriola;-inkscape-font-specification:Gabriola;stroke-width:0.39312923">Evolution</tspan></text>
+         x="13.343977"
+         y="398.88803"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.06285477px;line-height:0;font-family:Gabriola;-inkscape-font-specification:Gabriola;stroke-width:0.35424766">Evolution</tspan></text>
   </g>
 </svg>
