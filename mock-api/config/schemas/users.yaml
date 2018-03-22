@@ -1,23 +1,30 @@
 #this is a sample schema file for a user object.
 # comments in yaml are denoted with the # sign.
 # PROTIP: DON'T use tabs in yaml files! Only spaces.
+#
+# Generation help:
+# Mailing Addresses - https://www.randomlists.com/random-addresses
+# User First and Last Names - http://random-name-generator.info/random/
+# Date and Time (user format 'm/d/Y h:i A') - http://random-date-generator.com/
 ---
 # the following three lines here are to initialize
 # the mock objects and will not be included in the final
 # objects.
-initial_entries: 5
+# 
+initial_entries: 25
 randomize: false
 search_index: id
 
+firstName: {{.firstname}}
+lastName: {{.lastname}}
 displayName: {{.firstname}} {{.lastname}}
-id: {{toLower(.firstname)}}.{{toLower(.lastname)}}
+id: {{.userid}}
 email: {{toLower(.firstname)}}.{{toLower(.lastname)}}@{{.company}}.com
-mailingAddress:
- {{embed(address.yaml)}}
-created: {{.createdtimestamp}}
-lastAccess: {{.itemtimestamp}}
+mailingAddress: {{.mailingaddress}}
+created: {{.usercreated}}
+lastAccess: {{.lastaccess}}
 siteAdmin: {{.admin}}
 disabled: {{.disabled}}
 favorite: {{.favorite}}
-databaseId: {{uuid()}}
+databaseId: {{.uuid}}
 ...
