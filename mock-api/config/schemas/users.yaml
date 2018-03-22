@@ -20,7 +20,9 @@ lastName: {{.lastname}}
 displayName: {{.firstname}} {{.lastname}}
 id: {{.userid}}
 email: {{toLower(.firstname)}}.{{toLower(.lastname)}}@{{.company}}.com
-mailingAddress: {{.mailingaddress}}
+mailingAddress:
+ {{embed(address.yaml)}}
+groups: {{.groups}}
 created: {{.usercreated}}
 lastAccess: {{.lastaccess}}
 siteAdmin: {{.admin}}
