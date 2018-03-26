@@ -18,7 +18,7 @@ export class LoginComponent {
 
   login(): void {
     this._loadingService.register();
-    alert('Mock log in as ' + this.username);
+    alert('Mock log in as user ' + this.username);
     setTimeout(() => {
       this._router.navigate(['/']);
       this._loadingService.resolve();

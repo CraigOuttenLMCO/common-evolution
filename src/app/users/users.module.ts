@@ -22,11 +22,14 @@ import { CovalentLayoutModule } from '@covalent/core/layout';
 import { CovalentDialogsModule } from '@covalent/core/dialogs';
 import { CovalentMediaModule } from '@covalent/core/media';
 import { CovalentLoadingModule } from '@covalent/core/loading';
+//import { CovalentVirtualScrollModule } from '@covalent/core/virtual-scroll'; // andrew
+import { CovalentDataTableModule } from '@covalent/core/data-table'; // andrew
 
 import { UsersComponent } from './users.component';
 import { AdminUsersComponent } from './admin/admin-users.component'; // andrew
 import { ViewUsersComponent } from './view-users/view-users.component'; // andrew
 import { UsersFormComponent } from './form/form.component';
+import { PluralPipe } from '../../pipes/plural.pipe'; // andrew
 
 import { userRoutes } from './users.routes';
 
@@ -40,6 +43,7 @@ export { UsersComponent, AdminUsersComponent, UsersFormComponent, UserService, I
     AdminUsersComponent, // andrew
     UsersFormComponent,
     ViewUsersComponent, // andrew
+    PluralPipe, // andrew
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     // angular modules
@@ -66,6 +70,8 @@ export { UsersComponent, AdminUsersComponent, UsersFormComponent, UserService, I
     CovalentLayoutModule,
     CovalentSearchModule,
     CovalentCommonModule,
+    //CovalentVirtualScrollModule, // andrew
+    CovalentDataTableModule,
     // extra
     userRoutes,
   ], // modules needed to run this module

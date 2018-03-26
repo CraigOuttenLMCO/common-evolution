@@ -6,3 +6,12 @@
 a[mat-icon-button] {
     line-height: 36px;
 }
+
+/* andrew begin */
+/* andrew: fix for no horizontal scrollbar on td-data-table */
+/* what other things will this affect */
+div.td-data-table-scrollable {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+/* andrew end */

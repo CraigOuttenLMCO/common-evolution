@@ -1,4 +1,166 @@
-<mat-card class="push-bottom-xxl" tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+<!-- andrew testing begin -->
+<mat-card *ngIf="showTest2" class="push-bottom-xxl" tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+  <div layout="row" layout-align="start center" class="pad-left-sm pad-right-sm">
+    <span *ngIf="!searchBox.searchVisible" class="push-left-sm">
+      <span class="mat-title">Users</span>
+    </span>
+    <span *ngIf="!searchBox.searchVisible" class="push-left-sm">
+      <!--
+      <span *ngIf="(selectable && !selectedRows.length) || !selectable" class="mat-title">Users</span>
+      -->
+      <span *ngIf="(selectedRows.length > 0) && selectable" class="mat-body-1">{{ selectedRows.length | plural:'user' }} selected</span>
+    </span>
+    <td-search-box #searchBox
+      backIcon="arrow_back"
+      class="push-right-sm"
+      placeholder="Search here"
+      (searchDebounce)="search($event)"
+      showUnderline="true"
+      flex>
+    </td-search-box>
+    <button *ngIf="(selectedRows.length > 0) && selectable" mat-icon-button [mat-menu-trigger-for]="selectedUsersMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu x-position="before" #selectedUsersMenu="matMenu">
+        <button mat-menu-item (click)="enableSelectedUsers()">
+          <mat-icon>done</mat-icon> Enable Selected {{ selectedRows.length | plural:'User':'':false }}
+        </button>
+        <button mat-menu-item (click)="disableSelectedUsers()">
+          <mat-icon>block</mat-icon> Disable Selected {{ selectedRows.length | plural:'User':'':false }}
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="deleteSelectedUsers()">
+          <mat-icon>delete</mat-icon> Delete Selected {{ selectedRows.length | plural : 'User':'':false }}
+        </button>
+    </mat-menu>
+  </div>
+  <mat-divider></mat-divider>
+  <!-- andrew: removed
+    (rowClick)="showAlert($event)"
+  -->
+  <td-data-table
+    #dataTable
+    [data]="filteredUsers"
+    [columns]="columns"
+    [selectable]="selectable"
+    [clickable]="clickable"
+    [multiple]="multiple"
+    [sortable]="true"
+    [sortBy]="sortBy"
+    [(ngModel)]="selectedRows"
+    [sortOrder]="sortOrder"
+    (sortChange)="sort($event)"
+    [style.height.px]="450">
+    <ng-template tdDataTableTemplate="groups" let-value="value" let-user="row">
+        <button mat-icon-button (click)="editUserGroups(user['id'])">
+          <mat-icon>group</mat-icon>
+        </button>
+    </ng-template>
+    <ng-template tdDataTableTemplate="actions" let-value="value" let-user="row">
+        <button mat-icon-button [mat-menu-trigger-for]="userActionsMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu x-position="before" #userActionsMenu="matMenu">
+            <a [routerLink]="['/users', user['id'], 'edit']" [queryParams]="{view: this.view}" mat-menu-item>
+              <mat-icon>edit</mat-icon> Edit
+            </a>
+            <button mat-menu-item (click)="delete(user['id'])">
+              <mat-icon>delete</mat-icon> Delete
+            </button>
+            <div *ngIf="user['disabled']">
+              <a [routerLink]="['/users', user['id'], 'enable']" mat-menu-item>
+                <mat-icon>add_circle_outline</mat-icon> Enable
+              </a>
+            </div>
+        </mat-menu>
+    </ng-template>
+  </td-data-table>
+
+  <div class="md-padding" *ngIf="!dataTable.hasData" layout="row" layout-align="center center">
+    <h3>No results to display.</h3>
+  </div>
+</mat-card>
+<!-- andrew testing end -->
+
+<mat-card *ngIf="showTest1" class="push-bottom-xxl" tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+  <!-- andrew: added class 'andrew' -->
+  <td-search-box
+    class="push-left push-right"
+    placeholder="Search"
+    [alwaysVisible]="true"
+    [showUnderline]="true"
+    (searchDebounce)="filterUsers($event)">
+  </td-search-box>
+  <mat-divider></mat-divider>
+  <ng-template tdLoading="users.list">
+    <!-- andrew: original
+    <mat-list class="will-load">
+    -->
+    <!-- andrew: test adding scrollbar -->
+    <mat-list class="will-load scrollable">
+    <!-- andrew scrollbar end -->
+      <div class="pad" *ngIf="filteredUsers?.length === 0" layout="row" layout-align="center center">
+        <h3>No users to display.</h3>
+      </div>
+      <!-- andrew begin -->
+      <!-- virtual scroll testing begin -->
+      <!--
+      <td-virtual-scroll-container #virtualScroll [style.height.px]="400" [data]="filteredUsers">
+        <ng-template let-user="row" let-last="last" tdVirtualScrollRow>
+      -->
+      <!-- virtual scroll testing end -->
+      <!-- original -->
+      <ng-template let-user let-last="last" ngFor [ngForOf]="filteredUsers">
+        <!-- andrew end -->
+        <mat-list-item>
+          <mat-icon matListAvatar>person</mat-icon>
+          <h3 matLine> {{user.displayName}} </h3>
+          <p matLine> {{user.email}} </p>
+          <p matLine hide-gt-md class="mat-caption"> last login: {{ user.lastAccess | timeAgo }} </p>
+          <span flex></span>
+          <span hide-xs hide-sm hide-md flex-gt-xs="60" flex-xs="40" layout-gt-xs="row">
+              <div class="mat-caption tc-grey-500" flex-gt-xs="50"> {{ user.created | date }} </div>
+              <div class="mat-caption tc-grey-500" flex-gt-xs="50"> {{ user.lastAccess | timeAgo }} </div>
+          </span>
+          <span>
+              <button mat-icon-button [mat-menu-trigger-for]="menu">
+              <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu x-position="before" #menu="matMenu">
+                  <!-- andrew: added '/users' -->
+                  <!-- [queryParams]="{view: 'administrators'}" -->
+                  <a [routerLink]="['/users', user.id, 'edit']" [queryParams]="{view: this.view}" mat-menu-item>
+                    <mat-icon>edit</mat-icon> Edit
+                  </a>
+                  <button mat-menu-item (click)="delete(user.id)">
+                    <mat-icon>delete</mat-icon> Delete
+                  </button>
+                  <!-- Andrew begin -->
+                  <div *ngIf="user.disabled">
+                    <!-- andrew: added '/users' -->
+                    <a [routerLink]="['/users', user.id, 'enable']" mat-menu-item>
+                      <mat-icon>add_circle_outline</mat-icon> Enable
+                    </a>
+                  </div>
+                  <!-- Andrew end -->
+              </mat-menu>
+          </span>
+        </mat-list-item>
+        <mat-divider *ngIf="!last" [inset]="true"></mat-divider>
+      </ng-template>
+      <!-- andrew begin -->
+    <!-- virtual scroll testing begin -->
+    <!--
+    </td-virtual-scroll-container>
+    -->
+    <!-- virtual scroll testing end -->
+    <!-- andrew end -->
+    </mat-list>
+  </ng-template>
+</mat-card>
+
+<!-- andrew: original -->
+<mat-card *ngIf="showOriginal" class="push-bottom-xxl" tdMediaToggle="gt-xs" [mediaClasses]="['push']">
   <!-- andrew: added class 'andrew' -->
   <td-search-box
     class="push-left push-right andrew"
